@@ -1,0 +1,57 @@
+<html>
+    
+    <style>
+.butto {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:79px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+    </style>
+    <br><br>
+    <h1><center><font size="30"> NIPER Mess Attendance Sheet for PhD</font></center></h1>
+    
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+function LogIn(){
+loggedin=false;
+forbe="";
+forbe=prompt("Enter your attendance code:","");
+forbe=forbe.toLowerCase();
+if (forbe=="2022") { 
+loggedin=true;
+window.location="https://docs.google.com/forms/d/e/1FAIpQLSdXiuy7v_5J3EYESX6suJkWB3DA-RYzDOD8xGtW5QWiRqtI9A/viewform?usp=sf_link";
+}
+if (forbe=="2020") {
+loggedin=true;
+window.location="https://www.facebook.com";
+}
+if (loggedin==false) {
+alert("Invalid login!");
+}
+}
+</SCRIPT> 
+<BODY>
+<center>
+<form><input type=button value="Click Here" class="butto" onClick="LogIn()"></form>
+</center>
+
+</body>
+
+
+</html>
