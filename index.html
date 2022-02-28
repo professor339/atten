@@ -1,5 +1,7 @@
-<html>
-    
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 .butto {
 	background-color:#44c767;
@@ -9,7 +11,7 @@
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:79px;
+	font-size:30px;
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
@@ -21,42 +23,81 @@
 	position:relative;
 	top:1px;
 }
+.but {
+	background-color:white;
+	border-radius:65px;
+	border:8px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:30px;
+	padding:16px 3px 5px 7px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	width: 200px
+}
+.myButton:hover {
+	background-color:white;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
 
     </style>
+    <style type="text/css">
+
+  
+  #date
+{
+	margin-top:7px;
+	color:black;
+	font-size:20px;
+	border:2px dashed #2E9AFE;
+	width: 400px;
+}
+
+
+</style>
     <br><br>
-    <h1><center><font size="30"> NIPER Mess Attendance Sheet for PhD </font></center></h1>
-   <br><br> <p><center><font color="blue" size="10">
-<b><i><span id='date-time'></b></i></span></font></center></p>
-<script>
-var dt = new Date();
-document.getElementById('date-time').innerHTML=dt;
-</script><br><br>
-<HEAD>
-<SCRIPT LANGUAGE="JavaScript">
-function LogIn(){
-loggedin=false;
-forbe="";
-forbe=prompt("Enter your attendance code:","");
-forbe=forbe.toLowerCase();
-if (forbe=="2022") { 
-loggedin=true;
-window.location="mayank.html";
-}
-if (forbe=="2020") {
-loggedin=true;
-window.location="https://www.facebook.com";
-}
-if (loggedin==false) {
-alert("Invalid login!");
-}
-}
-</SCRIPT> 
-<BODY>
-<center>
-<form><input type=button value="Click Here" class="butto" onClick="LogIn()"></form>
+    <b><center>NIPER Mess Attendance Sheet for PhD</center>
+</b><br><br>
+      <center> <p id="date"></p></center><br><br>
+    <script type="text/javascript">
+    window.onload = setInterval(clock,1000);
+
+    function clock()
+    {
+	  var d = new Date();
+	  
+	  var date = d.getDate();
+	  
+	  var month = d.getMonth();
+	  var montharr =["Jan","Feb","Mar","April","May","June","July","Aug","Sep","Oct","Nov","Dec"];
+	  month=montharr[month];
+	  
+	  var year = d.getFullYear();
+	  
+	  var day = d.getDay();
+	  var dayarr =["Sun","Mon","Tues","Wed","Thurs","Fri","Sat"];
+	  day=dayarr[day];
+	  
+	
+	  document.getElementById("date").innerHTML=day+" , "+date+" "+month+" "+year;
+	  
+    }
+  </script>
+  
+  
+<form name="keeper" action="javascript:location.href =
+window.document.keeper.page.value + '.html'" style="margin:0;">
+    <center>
+<div style="display:inline;">
+<input type="text" name="page" placeholder="Entercode" class="but"><br><br>
+<input type="submit" value="Login" class="butto">
+<noscript><div style="display:inline;color:#ff0000;
+background-color:#ffff66; font:normal 11px tahoma,sans-serif;">
+<br>Javascript is required to access this<br>area. Yours seems
+to be disabled.</div></noscript></div></form>
 </center>
-
-</body>
-
-
-</html>
